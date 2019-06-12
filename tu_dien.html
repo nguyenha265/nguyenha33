@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" name="fname" id ="text">
+    <input type="button" value="dịch" onclick="tuDien()">
+</form>
+<script>
+
+    let english = ["sun","hot","too","need","air conditioning"];
+    let vietnames = ["trời","nóng","quá","cần","điều hòa"];
+    let index=-1;
+    function tuDien() {
+        for(let i=0;i<english.length;i++){
+            if(english[i] === document.getElementById("text").value){
+               index=i;
+            }
+        } document.getElementById('i').innerHTML+=vietnames[index] + "<br/>";
+        document.getElementById("text").value = "";
+    }
+</script>
+<p id="i"></p>
+</body>
+</html>
